@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .button
+            {
+                width: 50px;
+                height: 50px;
+                margin: 2px;
+                color: green;
+                background-color: black;
+                border: none;
+                font-size: 18px;
+            }
+            .box
+            {
+                width: 227px;
+                height: 50px;
+               background: linear-gradient(to right,#3EE918,#F0BD0D);
+                font-size: 20px;
+                border: none;
+                text-align: right;
+            }
+            .myform
+            {
+                position: absolute;
+                top: 10%;
+                left: 43%;
+            }
+            .clor
+            {
+                background: linear-gradient(to right,#E91884,#181BE9);
+                height: 100%;
+                width:  100%;
+            }
+            .head
+            {
+               color: black;
+            }
+        </style>
+        <script>
+            function display(n)
+            {
+                document.calculator.text1.value=calculator.text1.value+n;
+            }
+            function res()
+                    {
+                        document.calculator.text1.value=eval(document.calculator.text1.value);
+                    }
+            function edit()
+                    {
+                        document.calculator.text1.value=document.calculator.text1.value.substring(0,document.calculator.text1.value.length-1);
+                    }
+            
+        </script>
+    </head>
+    <body class="clor">
+        <center><h1 class="head">CALCULATOR</h1></center>
+        <form name="calculator" class="myform">
+            <input type="text"class="box"name="text1"><br><p></p>
+            <input type="button"class="button"name="one"value="1"onclick="display((one.value))">
+            <input type="button"class="button"name="two"value="2"onclick="display((two.value))">
+            <input type="button"class="button"name="three"value="3"onclick="display(three.value)">
+            <input type="reset"class="button"name="clear"value="C"><br><p></p>
+            <input type="button"class="button"name="four"value="4"onclick="display(four.value)">
+            <input type="button"class="button"name="five"value="5"onclick="display(five.value)">
+            <input type="button"class="button"name="six"value="6"onclick="display(six.value)">
+            <input type="button"class="button"name="edit"value="<"onclick="edit()"><br><p></p>
+            <input type="button"class="button"name="seven"value="7"onclick="display(seven.value)">
+            <input type="button"class="button"name="eight"value="8"onclick="display(eight.value)">
+            <input type="button"class="button"name="nine"value="9"onclick="display(nine.value)">
+            <input type="button"class="button"name="add"value="+"onclick="display(add.value)"><br><p></p>
+            <input type="button"name="zero"value="0"style="background-color: black;border: none;width: 112px;height: 50px;font-size: 18px;color: green;"onclick="display(zero.value)">
+            <input type="button"class="button"name="dot"value="."onclick="display(dot.value)">
+            <input type="button"class="button"name="sub"value="-"onclick="display(sub.value)"><br><p></p>
+            <input type="button"class="button"name="mul"value="*"onclick="display(mul.value)">
+            <input type="button"class="button"name="div"value="/"onclick="display(div.value)">
+            <input type="button"class="button"name="mod"value="%"onclick="display(mod.value)">
+            <input type="button"class="button"name="equal"value="="onclick="res()">
+        </form>
+    </body>
+</html>
